@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         working_directory:
-          - "./"
+          - "./adsdatahub"
           - "./adsdatahub-cli"
     defaults:
       run:

@@ -1,36 +1,36 @@
-[tool.poetry]
+[project]
 name = "adsdatahub-cli"
-version = "0.0.3"
+version = "0.0.4"
 description = ""
-authors = ["CyberAgent, Inc."]
 readme = "README.md"
-packages = [{ include = "adsdatahub_cli", from = "src" }]
+requires-python = ">=3.11"
+authors = [{ name = "ya7010", email = "ya7010@outlook.com" }]
+dependencies = [
+  "adsdatahub",
+  "pandas",
+  "rich",
+  "rich-argparse",
+]
 
-[tool.poetry.scripts]
-adh = "adsdatahub_cli.__main__:main"
-
-[tool.poetry.dependencies]
-python = "^3.11"
-adsdatahub = "^0.0.1"
-pandas = "^2.2.1"
-rich = "^13.7.1"
-rich-argparse = "^1.4.0"
-
-
-[tool.poetry.group.dev.dependencies]
-pandas-stubs = "^2.2.1.240316"
-ruff = "^0.3.4"
-pyright = "^1.1.356"
-taskipy = "^1.12.2"
-pytest = "^8.1.1"
-
-[tool.taskipy.tasks]
-format = "ruff format ."
-lint = "ruff check ."
-typecheck = "pyright src/** tests/**"
-test = "pytest"
-ci = "task format && task lint && task typecheck && task test"
+[dependency-groups]
+dev = [
+  "pandas-stubs",
+  "pyright",
+  "pytest",
+  "ruff",
+  "taskipy",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.taskipy.tasks]
+ci = "task format && task lint && task typecheck && task test"
+format = "ruff format ."
+lint = "ruff check ."
+test = "pytest"
+typecheck = "pyright src/** tests/**"
+
+[tool.uv.sources]
+adsdatahub = { workspace = true }
