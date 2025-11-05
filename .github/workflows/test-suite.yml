@@ -27,23 +27,23 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install Poetry
-        uses: snok/install-poetry@v1
-      - name: Poetry Version
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+      - name: uv Version
         run: |
-          poetry --version
-      - name: Poetry Install Dependencies
+          uv --version
+      - name: Install Dependencies
         run: |
-          poetry install --no-interaction
+          uv sync --frozen
       - name: Format
         run: |
-          poetry run task format --diff
+          uv run task format --diff
       - name: Lint
         run: |
-          poetry run task lint --diff
+          uv run task lint --diff
       - name: Type Check
         run: |
-          poetry run task typecheck
+          uv run task typecheck
       - name: Test
         run: |
-          poetry run task test
+          uv run task test
