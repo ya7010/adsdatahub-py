@@ -10,12 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        working_directory:
-          - "./adsdatahub"
-          - "./adsdatahub-cli"
-    defaults:
-      run:
-        working-directory: ${{ matrix.working_directory }}
+        package:
+          - "adsdatahub"
+          - "adsdatahub-cli"
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
@@ -26,7 +23,9 @@ jobs:
         uses: astral-sh/setup-uv@v4
       - name: Build package
         run: |
+          cd ${{ matrix.package }}
           uv build
       - name: Publish to PyPI
         run: |
+          cd ${{ matrix.package }}
           uv publish --token ${{ secrets.PYPI_TOKEN }}
