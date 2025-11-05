@@ -23,7 +23,7 @@ class RealClient(Client):
             )
 
         if not bigquery_client:
-            bigquery_client = bigquery.Client(**kwargs)
+            bigquery_client = bigquery.Client(**kwargs)  # type: ignore[arg-type]
 
         self.restapi = restapi_client
         self.bigquery_client = bigquery_client

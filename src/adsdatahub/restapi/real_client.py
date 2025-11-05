@@ -108,14 +108,14 @@ class RealClient(Client, ClientWithProject):
         )
 
         if _http is None and self._credentials is not None:
-            if not self._credentials.valid:
-                self._credentials.refresh(google.auth.transport.requests.Request())
+            if not self._credentials.valid:  # type: ignore[attr-defined]
+                self._credentials.refresh(google.auth.transport.requests.Request())  # type: ignore[attr-defined]
 
             import adsdatahub.restapi.http
 
             self._http_internal = adsdatahub.restapi.http.RealClient(
                 headers={
-                    "Authorization": f"Bearer {self._credentials.token}",
+                    "Authorization": f"Bearer {self._credentials.token}",  # type: ignore[attr-defined]
                 },
                 timeout=60,
             )
