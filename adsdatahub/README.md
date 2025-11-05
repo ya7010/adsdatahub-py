@@ -1,7 +1,7 @@
-# Google の Ads Data Hub を Python で利用するためのライブラリ
+# Ads Data Hub API client for Python
 
 [![pypi package](https://badge.fury.io/py/adsdatahub.svg)](https://pypi.org/project/adsdatahub)
 
-## 使い方
+## Usage
 
-[examples](https://github.com/yassun7010/adsdatahub-py/tree/main/examples) を参考にすること。
+Please refer to the [examples](https://github.com/yassun7010/adsdatahub-py/tree/main/examples).
