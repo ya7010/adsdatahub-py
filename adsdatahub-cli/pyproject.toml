@@ -6,19 +6,19 @@ readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "ya7010", email = "ya7010@outlook.com" }]
 dependencies = [
-  "adsdatahub>=0.0.4,<0.0.5",
-  "pandas>=2.2.1,<3.0.0",
-  "rich>=13.7.1,<14.0.0",
-  "rich-argparse>=1.4.0,<2.0.0",
+  "adsdatahub",
+  "pandas",
+  "rich",
+  "rich-argparse",
 ]
 
 [dependency-groups]
 dev = [
-  "pandas-stubs>=2.2.1.240316,<3.0.0",
-  "pyright>=1.1.356,<2.0.0",
-  "pytest>=8.1.1,<9.0.0",
-  "ruff>=0.3.4,<0.4.0",
-  "taskipy>=1.12.2,<2.0.0",
+  "pandas-stubs",
+  "pyright",
+  "pytest",
+  "ruff",
+  "taskipy",
 ]
 
 [build-system]
