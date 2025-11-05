@@ -31,3 +31,6 @@ format = "ruff format ."
 lint = "ruff check ."
 test = "pytest"
 typecheck = "pyright src/** tests/**"
+
+[tool.uv.sources]
+adsdatahub = { workspace = true }
