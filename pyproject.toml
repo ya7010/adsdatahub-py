@@ -1,6 +1,6 @@
 [project]
 name = "adsdatahub-py"
-version = "0.0.5"
+version = "0.0.6"
 dependencies = [
   "google-api-python-client>=2.114.0,<3.0.0",
   "google-cloud-bigquery>=3.17.2,<4.0.0",
