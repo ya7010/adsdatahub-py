@@ -4,4 +4,4 @@
 
 ## Usage
 
-Please refer to the [examples](https://github.com/yassun7010/adsdatahub-py/tree/main/examples).
+Please refer to the [examples](https://github.com/ya7010/adsdatahub-py/tree/main/adsdatahub/examples).
