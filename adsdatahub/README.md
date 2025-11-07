@@ -10,5 +10,5 @@ Please refer to the [examples](https://github.com/ya7010/adsdatahub-py/tree/main
 > You must have access to Ads Data Hub and configure Google Cloud authentication before use.
 > 
 > ```sh
-> gcloud alpha auth application-default login --scopes https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/> adsdatahub
+> gcloud alpha auth application-default login --scopes https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/adsdatahub
 > ```
