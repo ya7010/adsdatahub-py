@@ -4,3 +4,5 @@ credentials.json
 .env
 coverage.xml
 .coverage*
+adsdatahub_py.egg-info/
+build/
