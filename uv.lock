@@ -17,7 +17,7 @@ members = [
 
 [[package]]
 name = "adsdatahub"
-version = "0.0.6"
+version = "0.0.7"
 source = { editable = "adsdatahub" }
 dependencies = [
   { name = "google-api-python-client" },
@@ -68,7 +68,7 @@ dev = [
 
 [[package]]
 name = "adsdatahub-cli"
-version = "0.0.6"
+version = "0.0.7"
 source = { editable = "adsdatahub-cli" }
 dependencies = [
   { name = "adsdatahub" },
@@ -105,7 +105,7 @@ dev = [
 
 [[package]]
 name = "adsdatahub-py"
-version = "0.0.6"
+version = "0.0.7"
 source = { virtual = "." }
 dependencies = [
   { name = "google-api-python-client" },
